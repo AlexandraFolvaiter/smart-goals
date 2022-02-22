@@ -9,11 +9,9 @@ public class DatabaseConnection
     {
          try
          {
-             // var connectionString =
-             //     Environment.GetEnvironmentVariable("DatabaseConnectionString", EnvironmentVariableTarget.Process);
              var connectionString =
-                 "Server=tcp:smart-goals-demo.database.windows.net,1433;Initial Catalog=smart-goals-demo;Persist Security Info=False;User ID=smart-goals;Password=Parola1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-
+                 Environment.GetEnvironmentVariable("DatabaseConnectionString", EnvironmentVariableTarget.Process);
+          
              var connection = new SqlConnection(connectionString);
 
              connection.Open();
