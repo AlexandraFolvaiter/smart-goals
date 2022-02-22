@@ -1,0 +1,85 @@
+.goal-detail-container {
+  font-size: 20px;
+  .title-container {
+    font-size: 26px;
+  }
+  * {
+    margin: 20px 0;
+  }
+  button {
+    margin: 0;
+    margin-top: 10px;
+    border: 1px solid;
+  }
+
+  .progress-container {
+    border-radius:10px;
+    width: 100%;
+    height: 20px;
+    background-color: rgb(226, 175, 7);
+
+    .progress-left {
+      border-radius:10px;
+      height: 20px;
+      background-color:rgb(5, 131, 76)
+    }
+  }
+}
+
+label {
+  margin-left: 20px;
+}
+
+span {
+  color:rgb(194, 24, 91);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+mat-icon {
+  margin: 0 10px;
+  &:hover {
+    color:rgb(194, 24, 91)
+  }
+}
+
+.left-align-forced {
+  width:100%;
+  font-size: 18px;
+  line-height: 22px;
+
+  .data-container {
+    margin: 30px 0;
+  }
+
+}
+.smart-detail {
+  margin: 10px 0;
+  padding: 10px;
+  color: black;
+}
+
+.smart-detail-specific {
+  background-color: rgb(254, 206, 234);
+}
+
+.smart-detail-measurable {
+  background-color: rgb(254, 241, 210);
+}
+
+.smart-detail-achievable {
+  background-color: rgb(169, 253, 216);
+}
+
+.smart-detail-realistic {
+  background-color: rgb(215, 248, 255);
+}
+
+.smart-detail-timely {
+  background-color: rgb(206, 197, 250);
+}

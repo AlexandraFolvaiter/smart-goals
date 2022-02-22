@@ -1,0 +1,42 @@
+<div *ngIf="showLoader">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="!showLoader"
+     class="goals-toolbar-container">
+  <button mat-raised-button
+          color="primary"
+          (click)="openAddModal()"> + Add Goal</button>
+</div>
+
+<div #gridParent>
+  <mat-grid-list [cols]="columns"
+                 rowHeight="270px"
+                 cols-sm="3">
+    <mat-grid-tile *ngFor="let goal of goals">
+      <mat-card class="card">
+
+        <mat-card-actions class="card-actions-container">
+          <mat-icon aria-hidden="false"
+                    aria-label="Example home icon"
+                    (click)="editGoal(goal)">edit</mat-icon>
+          <mat-icon aria-hidden="false"
+                    aria-label="Example home icon"
+                    (click)="deleteGoal(goal.id)">delete</mat-icon>
+        </mat-card-actions>
+
+        <mat-card-title-group>
+          <mat-card-title routerLink="/details/{{goal.id}}">{{goal.title}}</mat-card-title>
+
+          <mat-icon mat-card-md-image
+                    class="big-icon">{{getIcon(goal.type)}}</mat-icon>
+        </mat-card-title-group>
+
+        <mat-card-content>
+          <div>Type: <span>{{goal.type}}</span></div>
+          <div>Status: <span class="status-{{getStatus(goal.status)}}-container">{{goal.status}}</span></div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

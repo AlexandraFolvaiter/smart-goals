@@ -1,0 +1,100 @@
+<div *ngIf="showLoader">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="!showLoader">
+  <div class="goal-detail-container">
+    <button mat-stroked-button
+            color="primary"
+            routerLink="../../goals">Back to goals</button>
+    <div class="title-container">
+      Goal: <span>{{goal.title}}</span>
+    </div>
+
+    <div>
+      <div>
+        <span>Type: </span> {{goal.type}}
+      </div>
+      <div>
+        <span>Status: </span> {{goal.status}}
+      </div>
+    </div>
+
+    <span>Progress:</span> {{getProgress()}}
+    <div class="progress-container">
+
+      <div class="progress-left"
+           [ngStyle]="{'width': getProgress()}"> </div>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <h1>Objectives</h1>
+    <button mat-raised-button
+            color="primary"
+            (click)="addObjective()">+ Add Objective</button>
+  </div>
+
+  <mat-accordion class="example-headers-align"
+                 multi>
+    <mat-expansion-panel *ngFor="let obj of goal.objectives">
+      <mat-expansion-panel-header class="objective-{{getObjectiveClass(obj.isFinished)}}-container">
+        <mat-panel-title>
+          <mat-checkbox class="example-margin"
+                        [(ngModel)]="obj.isFinished"
+                        (click)="$event.stopPropagation();updateIsFinished(obj);"></mat-checkbox>
+          <label>{{obj.name}}</label>
+        </mat-panel-title>
+
+        <div class="action-icons-container">
+          <mat-icon aria-hidden="false"
+                    aria-label="Example home icon"
+                    (click)="$event.stopPropagation();editObjective(obj)">edit</mat-icon>
+          <mat-icon aria-hidden="false"
+                    aria-label="Example home icon"
+                    (click)="$event.stopPropagation();deleteObjective(obj.id)">delete</mat-icon>
+        </div>
+      </mat-expansion-panel-header>
+
+      <mat-grid-list cols="5"
+                     rowHeight="300px">
+        <mat-grid-tile [colspan]="3">
+          <div class="left-align-forced">
+            <div class="data-container">
+              <span>Description:</span> {{obj.description}}
+            </div>
+
+            <div class="data-container">
+              <span>Time estimated: </span> {{obj.timeEstimated}}
+            </div>
+          </div>
+
+        </mat-grid-tile>
+        <mat-grid-tile class="left-align-forced"
+                       [colspan]="2">
+          <div class="left-align-forced">
+            <div class="smart-detail smart-detail-specific">
+              <b>Specific: </b>{{obj.specific}}
+            </div>
+            <div class="smart-detail smart-detail-measurable">
+              <b>Measurable: </b>{{obj.measurable}}
+            </div>
+            <div class="smart-detail smart-detail-achievable">
+              <b>Achievable: </b>{{obj.achievable}}
+            </div>
+            <div class="smart-detail smart-detail-realistic">
+              <b>Realistic: </b>{{obj.realistic}}
+            </div>
+            <div class="smart-detail smart-detail-timely">
+              <b>Timely: </b>{{obj.timely}}
+            </div>
+          </div>
+
+        </mat-grid-tile>
+      </mat-grid-list>
+
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+</div>

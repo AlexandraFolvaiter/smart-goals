@@ -1,0 +1,74 @@
+<h2 mat-dialog-title
+    *ngIf="!isEditMode">Add a new Goal</h2>
+
+<h2 mat-dialog-title
+    *ngIf="isEditMode">Edit goal - {{objective.name}}</h2>
+
+<mat-dialog-content>
+
+  <form [formGroup]="objectiveForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Name *</mat-label>
+      <input matInput
+             type="text"
+             formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Description *</mat-label>
+      <textarea matInput
+                formControlName="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Time Estimated *</mat-label>
+      <input matInput
+             type="text"
+             formControlName="timeEstimated">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Specific</mat-label>
+      <input matInput
+             type="text"
+             formControlName="specific">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Measurable</mat-label>
+      <input matInput
+             type="text"
+             formControlName="measurable">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Achievable</mat-label>
+      <input matInput
+             type="text"
+             formControlName="achievable">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Realistic</mat-label>
+      <input matInput
+             type="text"
+             formControlName="realistic">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Timely</mat-label>
+      <input matInput
+             type="text"
+             formControlName="timely">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button
+          mat-dialog-close
+          [mat-dialog-close]="null">Cancel</button>
+  <button mat-button
+          [disabled]="objectiveForm.invalid"
+          [mat-dialog-close]="objectiveForm.value">Save</button>
+</mat-dialog-actions>

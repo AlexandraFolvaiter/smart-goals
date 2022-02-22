@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <span>Welcome to SMART Goals</span>
+  <span class="spacer"></span>
+  <button mat-raised-button
+          color="accent"
+          (click)="openDetailsDialog()">
+    See details about the business of the application
+  </button>
+</mat-toolbar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+
+</div>
