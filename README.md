@@ -4,9 +4,9 @@
 
 1. [Motivation](#motivation)
 2. [Project description](#project-description)
-3. [Functionalities](#functionalities)
-4. [Infrastructure Architecture & Technologies](#infrastructure-architecture-&-technologies)
-5. [License](#license)
+4. [Infrastructure Architecture & Technologies](#Infrastructure-Architecture-&-Technologies)
+5. [Demo](#demo)
+6. [License](#license)
 
 # Motivation
 
@@ -18,8 +18,6 @@ The main idea on which this project is created can be found in [this file](https
  
 The project aims to do the management of the goals and objectives that a person has, giving the opportunity to be accessible anywhere by any device. The user can update them as often as needed, keeping the progress and having an overview of the next steps that he has to make in order to complete the goal.
 
-# Functionalities
-
 # Infrastructure Architecture & Technologies
 The application is based on 3 components:
 - **A Client** - Is an Angular application deployed on a **Azure App Service**. It allows users to see and manipulate the goals and objectives using a friendly UI.
@@ -27,6 +25,8 @@ The application is based on 3 components:
 - **A Database** - Is a **Azure SQL Database** which stores the data.
 
 ![SmartGoals_structure_3](https://user-images.githubusercontent.com/17809789/155595336-af7c269e-9bed-4377-b27e-efb9e835a575.jpg)
+
+# Demo
 
 # License
 [MIT License](https://github.com/AlexandraFolvaiter/smart-goals/blob/main/LICENSE)
