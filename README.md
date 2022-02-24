@@ -26,7 +26,7 @@ The application is based on 3 components:
 - **An API** - Is an .Net 6.0 Azure Function deployes on a **Azure Function App**. It exposes an API with CRUD operations to manipulate the goals and the objectives.
 - **A Database** - Is a **Azure SQL Database** which stores the data.
 
-![SmartGoals_structure_2](https://user-images.githubusercontent.com/17809789/155594043-ce30c2fa-1b93-42ca-be3c-3ae97b632c7b.png)
+![SmartGoals_structure_3](https://user-images.githubusercontent.com/17809789/155595336-af7c269e-9bed-4377-b27e-efb9e835a575.jpg)
 
 # License
 [MIT License](https://github.com/AlexandraFolvaiter/smart-goals/blob/main/LICENSE)
