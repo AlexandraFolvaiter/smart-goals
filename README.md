@@ -4,7 +4,7 @@
 
 1. [Motivation](#motivation)
 2. [Project description](#project-description)
-4. [Infrastructure Architecture & Technologies](#Infrastructure-Architecture-&-Technologies)
+4. [Infrastructure Architecture & Technologies](#infrastructure-architecture-&-technologies)
 5. [Functionalities](#functionalities)
 6. [License](#license)
 
@@ -22,7 +22,7 @@ The project aims to do the management of the goals and objectives that a person 
 
 The application is based on 3 components:
 - **A Client** - Is an Angular application deployed on a **Azure App Service**. It allows users to see and manipulate the goals and objectives using a friendly UI.
-- **An API** - Is an .Net 6.0 Azure Function deployes on a **Azure Function App**. It exposes an API with CRUD operations to manipulate the goals and the objectives.
+- **An API** - Is an .Net 6.0 Azure Function deployed on a **Azure Function App**. It exposes an API with CRUD operations to manipulate the goals and the objectives.
 - **A Database** - Is a **Azure SQL Database** which stores the data.
 
 ![SmartGoals_structure_3](https://user-images.githubusercontent.com/17809789/155595336-af7c269e-9bed-4377-b27e-efb9e835a575.jpg)
