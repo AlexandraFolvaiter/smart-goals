@@ -27,7 +27,7 @@ The application is based on 3 components:
 
 ![SmartGoals_structure_3](https://user-images.githubusercontent.com/17809789/155595336-af7c269e-9bed-4377-b27e-efb9e835a575.jpg)
 
-[Here](https://www.youtube.com/watch?v=pi5paErwZIA) you can find the infrastructure demo.
+The demo for the infrastructure can be found [here](https://www.youtube.com/watch?v=pi5paErwZIA).
 
 # Functionalities
 
