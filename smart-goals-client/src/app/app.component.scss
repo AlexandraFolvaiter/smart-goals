@@ -16,6 +16,19 @@ mat-toolbar {
   button {
     margin-right: 15%;
   }
+
+  img {
+    height: 70px;
+  }
+}
+
+.warning-container {
+  font-size: 18px;
+  margin: 20px;
+  padding: 10px 30px;
+  border: 1px solid rgb(207, 154, 29);
+  border-radius: 10px;
+  background-color: rgb(254, 241, 210);
 }
 
 @media only screen and (max-width: 700px) {
@@ -35,3 +48,4 @@ mat-toolbar {
     margin: 10px 100px;
   }
 }
+

@@ -113,6 +113,11 @@ export class GoalDetailsComponent implements OnInit {
 
   getProgress() {
     var finished = this.goal.objectives.filter(x => x.isFinished === true);
+
+    if (this.goal.objectives != null && this.goal.objectives != undefined && this.goal.objectives.length == 0) {
+      return '0%';
+    }
+
     return ((100*finished.length)/this.goal.objectives.length) + '%';
   }
 

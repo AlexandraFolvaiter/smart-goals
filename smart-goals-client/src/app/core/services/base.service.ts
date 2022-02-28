@@ -42,7 +42,7 @@ export class BaseService {
     headers = headers.set('Accept', 'application/json');
     headers = headers.set('Content-Type', 'application/json; ; charset=UTF-8');
     headers = headers.set('Cache-Control', 'no-cache');
-    headers.append('Access-Control-Allow-Origin', 'http://localhost:4200');
+    headers.append('Access-Control-Allow-Origin', 'https://smart-goals-app.azurewebsites.net');
     headers.append('Access-Control-Allow-Credentials', 'true');
     return headers;
   }

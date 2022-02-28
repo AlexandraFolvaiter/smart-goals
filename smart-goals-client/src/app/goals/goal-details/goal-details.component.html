@@ -35,6 +35,9 @@
             (click)="addObjective()">+ Add Objective</button>
   </div>
 
+  <div *ngIf="goal.objectives.length === 0">
+    Please add some objectives!
+  </div>
   <mat-accordion class="example-headers-align"
                  multi>
     <mat-expansion-panel *ngFor="let obj of goal.objectives">
@@ -74,19 +77,19 @@
                        [colspan]="2">
           <div class="left-align-forced">
             <div class="smart-detail smart-detail-specific">
-              <b>Specific: </b>{{obj.specific}}
+              <b>Specific: </b>{{obj.specific === '' ? '-' : obj.specific}}
             </div>
             <div class="smart-detail smart-detail-measurable">
-              <b>Measurable: </b>{{obj.measurable}}
+              <b>Measurable: </b>{{obj.measurable === '' ? '-' : obj.measurable}}
             </div>
             <div class="smart-detail smart-detail-achievable">
-              <b>Achievable: </b>{{obj.achievable}}
+              <b>Achievable: </b>{{obj.achievable === '' ? '-' : obj.achievable}}
             </div>
             <div class="smart-detail smart-detail-realistic">
-              <b>Realistic: </b>{{obj.realistic}}
+              <b>Realistic: </b>{{obj.realistic === '' ? '-' : obj.realistic}}
             </div>
             <div class="smart-detail smart-detail-timely">
-              <b>Timely: </b>{{obj.timely}}
+              <b>Time-bounded: </b>{{obj.timely === '' ? '-' : obj.timely}}
             </div>
           </div>
 

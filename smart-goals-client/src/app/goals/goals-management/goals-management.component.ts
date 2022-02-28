@@ -27,7 +27,7 @@ export class GoalsManagementComponent implements OnInit {
       id: new FormControl(this.isEditMode ? this.goal?.id : null),
       title: new FormControl(this.isEditMode ? this.goal?.title : null, Validators.required),
       type: new FormControl(this.isEditMode ? this.goal?.type : null, Validators.required),
-      status: new FormControl(this.isEditMode ? this.goal?.status :'NotStarted'),
+      status: new FormControl(this.isEditMode ? this.goal?.status :'Not Started'),
     });
   }
 }
