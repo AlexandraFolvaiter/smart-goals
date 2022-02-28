@@ -5,7 +5,7 @@
 1. [Motivation](#motivation)
 2. [Project description](#project-description)
 4. [Infrastructure Architecture & Technologies](#Infrastructure-Architecture-&-Technologies)
-5. [Demo](#demo)
+5. [Functionalities](#functionalities)
 6. [License](#license)
 
 # Motivation
@@ -29,7 +29,7 @@ The application is based on 3 components:
 
 [Here](https://www.youtube.com/watch?v=pi5paErwZIA) you can find the infrastructure demo.
 
-# Functional Demo
+# Functionalities
 
 A user can do the management of the goals and the management of the objectives that a goal can have:
 - View all goals
